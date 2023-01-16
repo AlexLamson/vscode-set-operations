@@ -1,6 +1,7 @@
 {
   "name": "set-operations",
   "displayName": "Set Operations",
+  "publisher": "AlexLamson",
   "description": "Perform textual set operations between pairs of tabs",
   "version": "0.0.1",
   "engines": {
