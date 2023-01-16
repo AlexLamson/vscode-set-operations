@@ -1,5 +1,3 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import { window, commands, ExtensionContext } from 'vscode';
 
@@ -41,18 +39,15 @@ async function getTwoTabs(): Promise<[string[], string[]]> {
 	});
 }
 
-function stableSymmetricDifference(lines1:string[], lines2:string[]):string[] {
+function symmetricDifference(lines1:string[], lines2:string[]):string[] {
 	// TODO make this stable
 	const set1 = new Set(lines1);
 	const set2 = new Set(lines2);
 	const outputSet = new Set(set1);
-	var output = Object.assign([], lines1);
 
-    for (const elem of lines2) {
+    for (const elem of set2) {
         const operation = (outputSet.has(elem)) ? 'delete' : 'add';
         outputSet[operation](elem);
-		// const operation = (outputSet.has(elem)) ? 'delete' : 'add';
-        // output[operation](elem);
     }
 
     return Array.from(outputSet);
@@ -82,7 +77,7 @@ export function activate(context: ExtensionContext) {
 	context.subscriptions.push(commands.registerCommand('set-operations.symmetric_difference', async () => {
 		const [lines1, lines2] = await getTwoTabs();
 
-		let setSymmetricDifference = stableSymmetricDifference(lines1, lines2);
+		let setSymmetricDifference = symmetricDifference(lines1, lines2);
 
 		openInUntitled(setSymmetricDifference.join("\n"));
 	}));
@@ -94,10 +89,7 @@ export function activate(context: ExtensionContext) {
 
 		openInUntitled(Array.from(setUnion).join("\n"));
 	}));
-
-	// TODO publish extension
 }
 
-
-// This method is called when your extension is deactivated
+// This method is called when the extension is deactivated
 export function deactivate() {}
