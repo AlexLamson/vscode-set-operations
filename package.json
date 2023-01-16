@@ -1,13 +1,19 @@
 {
   "name": "set-operations",
-  "displayName": "set-operations",
+  "displayName": "Set Operations",
   "description": "Perform textual set operations between pairs of tabs",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.74.0"
   },
+  "repository": {
+  "type": "git",
+  "url": "git://github.com/AlexLamson/vscode-set-operations.git"
+	},
   "categories": [
-    "Other"
+    "Formatters",
+		"Other",
+		"Data Science"
   ],
   "activationEvents": [
     "onCommand:set-operations.intersection",
