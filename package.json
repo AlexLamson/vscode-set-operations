@@ -3,13 +3,14 @@
   "displayName": "Set Operations",
   "publisher": "AlexLamson",
   "description": "Perform textual set operations between pairs of tabs",
+  "icon": "images/logo.png",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.74.0"
   },
   "repository": {
   "type": "git",
-  "url": "git://github.com/AlexLamson/vscode-set-operations.git"
+  "url": "https://github.com/AlexLamson/vscode-set-operations.git"
 	},
   "categories": [
     "Formatters",
