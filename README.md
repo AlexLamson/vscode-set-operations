@@ -20,6 +20,6 @@ This extension allows you to perform set operations (such as intersection and di
 
 ## Contribution
 Please feel free to contribute to this extension by submitting pull requests or by reporting bugs.
-Support
 
+## Support
 If you have any questions or issues, please open an issue on the [GitHub page](https://github.com/AlexLamson/vscode-set-operations) for this extension.
